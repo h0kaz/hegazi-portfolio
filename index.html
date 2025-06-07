@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بورتفوليو محمد حجازي | Jr UX-UI Designer</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Your Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="gradient-bg">
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+201206097481" class="whatsapp-float-btn" target="_blank" aria-label="Contact me on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header Section -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider">
+                <span class="text-primary-green">محمد حجازي</span>.
+            </a>
+            <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                <a href="#hero" class="nav-link">الرئيسية</a>
+                <a href="#about" class="nav-link">عني</a>
+                <a href="#services" class="nav-link">خدماتي</a>
+                <a href="#portfolio" class="nav-link">أعمالي</a>
+                <a href="#testimonials" class="nav-link">الآراء</a>
+                <a href="#contact" class="nav-link">اتصل بي</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl z-[60] relative" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <div id="mobile-menu-panel" class="mobile-menu-panel">
+            <nav class="mt-24 flex flex-col items-center justify-center h-full">
+                <a href="#hero" class="mobile-nav-link">الرئيسية</a>
+                <a href="#about" class="mobile-nav-link">عني</a>
+                <a href="#services" class="mobile-nav-link">خدماتي</a>
+                <a href="#portfolio" class="mobile-nav-link">أعمالي</a>
+                <a href="#testimonials" class="mobile-nav-link">الآراء</a>
+                <a href="#contact" class="mobile-nav-link">اتصل بي</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center pt-24 md:pt-0">
+            <div class="container mx-auto px-6 flex-grow flex items-center">
+                <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+                    <div class="text-center md:text-right scroll-animate">
+                        <span class="text-primary-green font-semibold">مرحباً، أنا</span>
+                        <h1 class="text-4xl md:text-6xl font-extrabold my-4 text-white leading-tight">محمد حجازي 👋</h1>
+                        <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed">مصمم صفحات هبوط و تجربة مستخدم تركز علي تحقيق أعلي معدلات التحويل | Jr Ux-Ui CRO Focused Designer</p>
+                        <a href="#contact" class="glowing-btn inline-block font-bold py-3 px-8 border-2 rounded-lg">
+                            لنتعاون معاً <i class="fas fa-arrow-left mr-2"></i>
+                        </a>
+                    </div>
+                    <div class="flex justify-center scroll-animate" style="transition-delay: 200ms;">
+                         <img src="/assets/img/main-hero-me.png" id="hero-img" alt="صورة شخصية" class="rounded-full border-4 border-primary-green/50 shadow-lg shadow-primary-green/20">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="container mx-auto px-6 pb-12">
+                <div class="text-center mb-8 scroll-animate" style="transition-delay: 400ms;">
+                    <h3 class="text-lg font-semibold text-gray-300 tracking-wider">ثقة تستحقها بالأرقام</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="stat-item scroll-animate" style="transition-delay: 500ms;"><i class="fas fa-paint-brush text-3xl text-primary-green mb-3"></i><h4 class="text-3xl font-bold text-white">490<span class="text-primary-green">+</span></h4><p class="text-gray-400 mt-1">صفحة هبوط مصممة بإتقان</p></div>
+                    <div class="stat-item scroll-animate" style="transition-delay: 600ms;"><i class="fas fa-users text-3xl text-primary-green mb-3"></i><h4 class="text-3xl font-bold text-white">60<span class="text-primary-green">+</span></h4><p class="text-gray-400 mt-1">عميل سعيد</p></div>
+                    <div class="stat-item scroll-animate" style="transition-delay: 700ms;"><i class="fas fa-chart-line text-3xl text-primary-green mb-3"></i><h4 class="text-3xl font-bold text-white">22<span class="text-primary-green">%</span></h4><p class="text-gray-400 mt-1">معدل تحويل قياسي</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">نبذة <span class="text-primary-green">عني</span></h2>
+                    <p class="text-gray-400 mt-2">قصتي، مهاراتي، وشغفي بالتكنولوجيا.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="scroll-animate" style="transition-delay: 200ms;"><img src="/assets/img/section-2-img.webp" alt="صورة للعمل" class="rounded-lg shadow-xl"></div>
+                    <div class="scroll-animate" style="transition-delay: 400ms;">
+                        <p class="mb-6 text-gray-300 leading-loose">أنا مصمم ومطور واجهات مهتم بتقديم تجارب رقمية فعّالة وسلسة. أشتغل على تصميم صفحات هبوط ومتاجر إلكترونية بأداء عالي، سواء على EasyOrders، Shopify، أو تصميمات Figma المتخصصة في التحويل. أركز على التفاصيل، وأحب أن أُحوّل كل فكرة إلى تجربة مستخدم جذابة تدفع الزائر لاتخاذ القرار.</p>
+                        <h3 class="text-xl font-bold text-white mb-4">مهاراتي التقنية:</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">HTML5 & CSS3</span>
+                            <span class="skill-tag">Graphic Design</span>
+                            <span class="skill-tag">Shopify</span>
+                            <span class="skill-tag">EasyOrders</span>
+                            <span class="skill-tag">Lightfunnels</span>
+                            <span class="skill-tag">Youcan</span>
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Illustrator</span>
+                            <span class="skill-tag">Notion</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-dark-2">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">ماذا <span class="text-primary-green">أقدم؟</span></h2>
+                    <p class="text-gray-400 mt-2">حلول رقمية مبتكرة لتحقيق أهدافك.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 text-center scroll-animate"><i class="fas fa-store text-4xl text-primary-green mb-4"></i><h3 class="text-xl font-bold text-white mb-2">بناء المتاجر الإلكترونية</h3><p class="text-gray-400">تصميم وتطوير متاجر احترافية على منصات Shopify و EasyOrders لزيادة مبيعاتك.</p></div>
+                    <div class="glass-card p-8 text-center scroll-animate" style="transition-delay: 200ms;"><i class="fas fa-file-alt text-4xl text-primary-green mb-4"></i><h3 class="text-xl font-bold text-white mb-2">تصميم صفحات الهبوط</h3><p class="text-gray-400">إنشاء صفحات هبوط جذابة وفعالة للمنتجات والخدمات بهدف تحقيق أعلى معدل تحويل.</p></div>
+                    <div class="glass-card p-8 text-center scroll-animate" style="transition-delay: 400ms;"><i class="fas fa-palette text-4xl text-primary-green mb-4"></i><h3 class="text-xl font-bold text-white mb-2">تصميم واجهات المستخدم (UI/UX)</h3><p class="text-gray-400">تصميم تجارب مستخدم فريدة تركز على السهولة والجاذبية البصرية لتطبيقات الويب والجوال.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">أحدث <span class="text-primary-green">أعمالي</span></h2>
+                    <p class="text-gray-400 mt-2">نظرة على بعض المشاريع التي قمت بتنفيذها.</p>
+                </div>
+                <div id="portfolio-filters" class="flex justify-center flex-wrap gap-2 md:gap-4 mb-12 scroll-animate">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="product-landing">هبوط للمنتجات</button>
+                    <button class="filter-btn" data-filter="service-landing">هبوط للخدمات</button>
+                    <button class="filter-btn" data-filter="easyorders">متاجر EasyOrders</button>
+                    <button class="filter-btn" data-filter="shopify">متاجر Shopify</button>
+                </div>
+
+                <div id="portfolio-list" class="flex flex-col gap-12 lg:gap-16">
+                    <!-- Project 1: Shopify -->
+                    <div class="portfolio-item project-card scroll-animate" data-category="shopify" data-title="متجر تجارة الكترونية Ecommerce" data-description="متجر احترافي متخصص في التجارة الإلكترونية، تم تصميمه بالكامل باستخدام منصة Shopify مع التركيز على تقديم تجربة مستخدم مريحة وواضحة. راعيت فيه ترتيب المنتجات، سهولة التنقل، وسرعة الوصول لخطوة الشراء، بهدف رفع معدل التحويل وتحقيق مبيعات فعلية. المتجر مصمم بأسلوب عصري ومتوافق تمامًا مع جميع الأجهزة." data-img="/assets/img/prev-work-1.webp" data-link="https://unishopeg.com/collections/frontpage/products/kemei-km-1910">
+                        <div class="project-image"><img src="/assets/img/prev-work-1.webp" alt="صورة مشروع متجر الكتروني" class="rounded-lg shadow-lg"></div>
+                        <div class="project-details">
+                            <span class="project-category">متجر Shopify</span>
+                            <h3 class="project-title">متجر تجارة الكترونية Ecommerce</h3>
+                            <p class="project-summary">متجر احترافي متخصص في التجارة الإلكترونية، تم تصميمه بالكامل باستخدام منصة Shopify مع التركيز على تقديم تجربة مستخدم مريحة وواضحة.</p>
+                            <button class="project-cta-btn"><span>عرض التفاصيل</span><i class="fas fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                    <!-- Project 1.1: Shopify Furniture Store -->
+<div class="portfolio-item project-card scroll-animate" 
+     data-category="shopify" 
+     data-title="متجر أثاث إلكتروني على Shopify" 
+     data-description="متجر أثاث إلكتروني عصري تم تصميمه بالكامل على منصة Shopify.  
+ركزت في التصميم على عرض المنتجات بشكل أنيق، وتجربة مستخدم سهلة، واستعراض شامل لمميزات المنتج مع تفاصيل واضحة.
+
+المتجر يحتوي على:
+• صفحة رئيسية جاذبة  
+• صفحة منتج متكاملة  
+• مميزات الشحن وخدمة العملاء  
+• تصميم متجاوب ومناسب للموبايل
+
+🔒 المتجر محمي بكلمة مرور، يمكنك الدخول باستخدام كلمة المرور: 1" 
+     data-img="/assets/img/prev-work-5.webp" 
+     data-link="https://theprime-portfolio-1.myshopify.com/">
+
+    <div class="project-image">
+        <img src="/assets/img/prev-work-5.webp" alt="متجر أثاث على شوبيفاي" class="rounded-lg shadow-lg">
+    </div>
+
+    <div class="project-details">
+        <span class="project-category">متجر Shopify</span>
+        <h3 class="project-title">متجر أثاث إلكتروني</h3>
+        <p class="project-summary">
+            متجر أثاث احترافي على Shopify بتصميم نظيف وتجربة مستخدم مريحة. الدخول متاح بكلمة مرور: 1
+        </p>
+        <button class="project-cta-btn">
+            <span>عرض التفاصيل</span>
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+</div>
+
+                    <!-- Project 2: Landing Page -->
+                    <div class="portfolio-item project-card scroll-animate" data-category="product-landing" data-title="اعمالي في صفحات الهبوط للمنتجات" data-description="أصمم صفحات هبوط عالية الأداء على منصات مثل EasyOrders، Lite Funnel، Youcan، وFigma، بهدف جذب الزائر وتحويله لعميل حقيقي. أراعي في كل تصميم وضوح الرسالة، تسلسل المحتوى، وتحفيز الزائر لاتخاذ القرار من أول نظرة. الصفحات اللي بشتغل عليها مبنية على مبادئ CRO (تحسين معدل التحويل)، وبتحقق نتائج ملموسة سواء في جمع البيانات أو زيادة المبيعات." data-img="/assets/img/prev-work-2.webp" data-link="https://bit.ly/ThePrime-Portfolio">
+                        <div class="project-image"><img src="/assets/img/prev-work-2.webp" alt="صورة مشروع صفحة هبوط" class="rounded-lg shadow-lg"></div>
+                        <div class="project-details">
+                            <span class="project-category">صفحة هبوط لمنتج</span>
+                            <h3 class="project-title">اعمالي في صفحات الهبوط للمنتجات</h3>
+                            <p class="project-summary">أصمم صفحات هبوط جذابة وسريعة التحويل على منصات مثل EasyOrders، Youcan، Lite Funnel، وFigma، بهدف تحويل الزوار لعملاء بأعلى كفاءة ممكنة.</p>
+                            <button class="project-cta-btn"><span>عرض التفاصيل</span><i class="fas fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                    <!-- Project 3: EasyOrders -->
+                    <div class="portfolio-item project-card scroll-animate" data-category="easyorders" data-title="تصميم متاجر إلكترونية على EasyOrders" data-description="أقوم بتصميم متاجر إلكترونية احترافية باستخدام منصة EasyOrders، بواجهات عصرية وتجربة مستخدم تركز على البساطة وسهولة الوصول. المتاجر مصممة بعناية لتحقيق أعلى معدلات تحويل وتناسب مختلف المجالات. &#x1F6CD;️ بعض المتاجر التي قمت بتنفيذها: • https://steptrend.myeasyorders.com • https://hmedical.myeasyorders.com • https://hyalomed.myeasyorders.com • https://tuartla.myeasyorders.com • https://infinitybox.myeasyorders.com • https://abd-elrahman-supplement.myeasyorders.com • https://luxury-land.myeasyorders.com • https://nobelnotes.myeasyorders.com" data-img="/assets/img/prev-work-3.webp" data-link="https://bit.ly/ThePrime-Portfolio">
+                        <div class="project-image"><img src="/assets/img/prev-work-3.webp" alt="متجر إلكتروني" class="rounded-lg shadow-lg"></div>
+                        <div class="project-details">
+                            <span class="project-category">تصميم متاجر</span>
+                            <h3 class="project-title">متاجر إلكترونية على EasyOrders</h3>
+                            <p class="project-summary">متاجر إلكترونية مصممة على EasyOrders بواجهة سهلة وتجربة شراء فعالة لزيادة التحويلات.</p>
+                            <button class="project-cta-btn"><span>عرض التفاصيل</span><i class="fas fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                    <!-- Project 4: Figma Service Page -->
+                    <div class="portfolio-item project-card scroll-animate" data-category="service-landing" data-title="تصميم صفحة هبوط لخدمات على Figma" data-description="صفحة هبوط مخصصة للخدمات تم تصميمها على Figma باحترافية، تركز على توصيل القيمة بوضوح وجذب الزائر لاتخاذ الإجراء المناسب. تم بناء التصميم على مبادئ UX وCRO مع تسلسل منطقي للمحتوى، وCTA واضح، مما يجعل الصفحة مثالية لعرض الخدمات بشكل يقنع الزائر من أول نظرة." data-img="/assets/img/prev-work-4.webp" data-link="https://www.behance.net/gallery/224358461/CRO-Focused-Demo-Landing-Page">
+                        <div class="project-image"><img src="/assets/img/prev-work-4.webp" alt="صورة صفحة هبوط لخدمات على Figma" class="rounded-lg shadow-lg"></div>
+                        <div class="project-details">
+                            <span class="project-category">صفحة هبوط لخدمة</span>
+                            <h3 class="project-title">تصميم صفحة خدمات على Figma</h3>
+                            <p class="project-summary">تصميم صفحة هبوط على Figma لعرض خدمة بشكل جذاب ومرتب، مع تسلسل بصري ذكي ومحتوى يحفّز الزائر على التفاعل.</p>
+                            <button class="project-cta-btn"><span>عرض التفاصيل</span><i class="fas fa-arrow-left"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-dark-2">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">ماذا قال <span class="text-primary-green">عملائي؟</span></h2>
+                    <p class="text-gray-400 mt-2">شهادات أعتز بها من عملاء حقيقيين.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 scroll-animate"><p class="text-gray-300 italic mb-4">"الصراحة إنسان محترم وشغله محترم وبيقدر الوقت جدًا. مندمتش إنّي تعاملت معاه، وإن شاء الله مش هتكون آخر معاملة."</p><div class="flex items-center"><img src="/assets/img/reviews.webp" alt="تقييم مستر ياسين إسلام" class="w-12 h-12 rounded-full mr-6"><div><h4 class="font-bold text-white">مستر ياسين إسلام</h4><p class="text-sm text-primary-green">عميل حالي</p></div></div></div>
+                    <div class="glass-card p-8 scroll-animate" style="transition-delay: 200ms;"><p class="text-gray-300 italic mb-4">"من أوائل الناس اللي اتعاملت معاك، وحقيقي أول تعامل زي آخر تعامل. الشغل كل شوية بيزيد احترافية وبيطلع مظبوط كل مرة. بالتوفيق إن شاء الله ❤️"</p><div class="flex items-center"><img src="/assets/img/reviews.webp" alt="تقييم عمرو عادل" class="w-12 h-12 rounded-full mr-6"><div><h4 class="font-bold text-white">عمرو عادل</h4><p class="text-sm text-primary-green">صاحب مشروع</p></div></div></div>
+                    <div class="glass-card p-8 scroll-animate" style="transition-delay: 400ms;"><p class="text-gray-300 italic mb-4">"شغل وتعامل professional، وسعر منافس جدًا مقابل الجودة. بالتوفيق دايمًا ✨"</p><div class="flex items-center"><img src="/assets/img/reviews.webp" alt="تقييم يوسف" class="w-12 h-12 rounded-full mr-6"><div><h4 class="font-bold text-white">يوسف</h4><p class="text-sm text-primary-green">عميل متكرر</p></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 scroll-animate">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">لنتحدث <span class="text-primary-green">معاً</span></h2>
+                    <p class="text-gray-400 mt-2">هل لديك فكرة مشروع؟ لا تتردد في التواصل معي.</p>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <form action="https://formspree.io/f/mgvyodoe" method="POST" class="space-y-6 scroll-animate">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" name="name" placeholder="الاسم الكامل" class="contact-input" required>
+                            <input type="email" name="email" placeholder="البريد الإلكتروني" class="contact-input" required>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                             <input type="tel" name="phone" placeholder="رقم الموبايل (اختياري)" class="contact-input">
+                             <input type="text" name="subject" placeholder="الموضوع" class="contact-input" required>
+                        </div>
+                        <textarea name="message" placeholder="رسالتك..." rows="6" class="contact-input" required></textarea>
+                        <div class="text-center">
+                            <div class="flex flex-col items-center gap-4 max-w-sm mx-auto">
+                                <button type="submit" class="glowing-btn w-full font-bold py-3 px-12 border-2 rounded-lg">أرسل الرسالة</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Footer -->
+<footer class="bg-dark-2 py-8">
+    <div class="container mx-auto px-6 text-center text-gray-400">
+        <div class="flex justify-center space-x-6 space-x-reverse mb-4">
+            <a href="https://www.linkedin.com/in/mohammedhegazii/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.behance.net/mohamedhokaz" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i></a>
+            <a href="https://www.facebook.com/mohamed.hegazi.764878" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>&copy; <span id="year"></span> جميع الحقوق محفوظة. تم تصميمه وبرمجته بواسطة محمد حجازي. بمساعدة الذكاء الاصطناعي</p>
+    </div>
+</footer>
+
+    
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="fixed inset-0 bg-black/80 z-[60] flex items-center justify-center p-4 opacity-0 pointer-events-none">
+        <div id="modal-content" class="bg-dark-2 rounded-lg max-w-4xl w-full max-h-[90vh] flex flex-col relative transform scale-95 transition-transform duration-300">
+            <button id="close-modal-btn" class="absolute top-3 right-3 text-gray-400 hover:text-white text-3xl z-20">&times;</button>
+            <div class="overflow-y-auto p-6 md:p-8">
+                <div class="grid lg:grid-cols-2 gap-8 items-start">
+                    <div><img id="modal-img" src="" alt="صورة المشروع" class="rounded-lg w-full mb-4 lg:mb-0"></div>
+                    <div>
+                        <h3 id="modal-title" class="text-2xl lg:text-3xl font-bold text-white mb-3"></h3>
+                        <p id="modal-description" class="text-gray-300 leading-relaxed whitespace-pre-wrap"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-shrink-0 mt-auto bg-dark-3/50 p-4 border-t border-gray-700/50">
+                <div class="flex justify-between items-center">
+                    <a id="modal-link" href="#" target="_blank" class="glowing-btn inline-block font-bold py-2 px-6 border-2 rounded-lg text-sm">
+                        معاينة المشروع <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <button id="modal-prev" class="modal-nav-btn"><i class="fas fa-chevron-right"></i></button>
+                        <button id="modal-next" class="modal-nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your Custom JS File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
