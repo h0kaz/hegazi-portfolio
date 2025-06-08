@@ -190,3 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'ArrowLeft') modalPrevBtn.click();
     });
 });
+console.log(
+  "%c✨ Thanks to Amr Mohamed Adel for the endless support, Thanks Bro 🤍 ✨",
+  "color: #ffffff; background:rgb(18, 30, 142); font-size: 18px; padding: 8px 12px; border-radius: 6px; font-weight: bold;"
+);
