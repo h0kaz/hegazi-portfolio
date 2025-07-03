@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام التسعير وقواعد العمل</title>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPD3G72XR0"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VPD3G72XR0');
+  </script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper.js CSS for Carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        /* Custom styles to apply the Cairo font and new background */
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #0f1411;
+        }
+        /* Gradient text for titles */
+        .gradient-text {
+            background: linear-gradient(to right, #22C55E, #16A34A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        
+        /* General Page Load Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        /* Premium Card & Rules Card Glow Animation */
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 15px var(--glow-color-start, rgba(34, 197, 94, 0.3)), 0 0 5px var(--glow-color-start, rgba(34, 197, 94, 0.2));
+                border-color: var(--border-color-start, #22C55E);
+            }
+            50% {
+                box-shadow: 0 0 30px var(--glow-color-end, rgba(34, 197, 94, 0.6)), 0 0 10px var(--glow-color-end, rgba(34, 197, 94, 0.4));
+                border-color: var(--border-color-end, #34D399);
+            }
+        }
+        .animate-pulse-glow {
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+
+        /* Badge Glowing Highlight Animation */
+        @keyframes badge-glow {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+        .animate-badge-glow {
+            animation: badge-glow 3.5s ease-in-out infinite;
+        }
+
+        /* Most Popular Tag Animation */
+        @keyframes shake {
+            0%, 100% { transform: rotate(-12deg); }
+            50% { transform: rotate(-14deg) scale(1.05); }
+        }
+        .animate-shake {
+            animation: shake 2.5s infinite ease-in-out;
+        }
+        
+        /* Modern Swiper Navigation Arrows */
+        .swiper-button-next, .swiper-button-prev {
+            background-color: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(4px);
+            width: 44px;
+            height: 44px;
+            border-radius: 9999px;
+            color: #fff;
+            transition: background-color 0.3s, transform 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background-color: rgba(34, 197, 94, 0.5);
+            transform: scale(1.1);
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 1rem;
+            font-weight: 900;
+        }
+        
+        /* Modern Swiper Pagination */
+        .swiper-pagination-bullet {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 10px;
+            height: 10px;
+            opacity: 0.7;
+            transition: background-color 0.3s;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #22C55E;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 sm:p-8 animate-fadeIn">
+
+        <!-- Header -->
+        <header class="text-center mb-12 pt-16">
+            <!-- Personal Image Badge Placeholder -->
+            <div class="relative inline-block mx-auto mb-8 group">
+                <!-- The highlight -->
+                <div class="absolute -inset-1 bg-green-500 rounded-full blur-md animate-badge-glow group-hover:blur-lg transition duration-300"></div>
+                <!-- The container for the badge content -->
+                <div class="relative bg-slate-800 rounded-full flex items-center justify-center p-2 h-24 w-72">
+                     <img src="assets/1.svg" alt="Badge" class="w-full object-contain p-2" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=text-slate-400>مكان البادج</span>'">
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-2">نظام التسعير وقواعد العمل</h1>
+            <p class="text-lg md:text-xl font-bold gradient-text">Landing Pages & Stores</p>
+        </header>
+
+        <!-- Pricing Section: EasyOrder -->
+        <section id="easyorder">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold border-b-2 border-green-500 pb-2 inline-block">
+                    <i class="fas fa-rocket text-green-400"></i> Landing Page (EasyOrder)
+                </h2>
+                <!-- Logo Placeholder -->
+                <div class="mt-4 h-16 w-48 bg-slate-800/50 mx-auto rounded-lg flex items-center justify-center border border-dashed border-slate-600">
+                    <img src="assets/2.svg" alt="EasyOrder Logo" class="h-10 object-contain" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=text-slate-400>مكان اللوجو</span>'">
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Traditional Package -->
+                <div class="bg-slate-800 rounded-2xl p-8 shadow-lg transform hover:scale-105 hover:shadow-green-500/20 transition-all duration-300 border border-slate-700 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2">الباقة التقليدية</h3>
+                    <p class="text-sm text-slate-400 mb-4">للمنتجات التقليدية فقط</p>
+                    <p class="text-4xl font-extrabold mb-6 gradient-text">400 جنيه</p>
+                    <div class="flex-grow">
+                        <p class="font-bold text-lg mb-4 flex items-center"><i class="fas fa-box-open text-green-500 ml-3"></i> تشمل:</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>تصميم صفحة هبوط جذابة تبرز مميزات المنتج.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>كتابة محتوى تسويقي قوي (CRO).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>تصميم متجاوب بالكامل على جميع الأجهزة.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>إضافة Facebook Pixel للتتبع.</span></li>
+                            <li class="flex items-start"><i class="fas fa-plus-circle text-slate-400 mt-1 ml-3 flex-shrink-0"></i> <span>إضافة وربط دومين + متابعة = 150 جنيه إضافية.</span></li>
+                            <li class="flex items-start"><i class="fas fa-headset text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>دعم تقني مجاني لمدة 24 ساعة بعد التسليم.</span></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4 text-red-500 text-sm font-semibold">
+                        <i class="fas fa-exclamation-circle ml-2"></i>
+                        ملحوظة: يضاف 100 جنيه إذا كان المنتج خارج السوق المصري.
+                    </div>
+                    <button onclick="openWhatsApp('الباقة التقليدية', 'EasyOrder')" class="mt-8 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">اطلب الآن</button>
+                </div>
+
+                <!-- Card 2: Premium Package -->
+                <div class="bg-slate-800 rounded-2xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 border-2 flex flex-col animate-pulse-glow" style="--border-color-start: #22C55E; --border-color-end: #34D399; --glow-color-start: rgba(34, 197, 94, 0.3); --glow-color-end: rgba(34, 197, 94, 0.6);">
+                    <div class="relative">
+                        <span class="absolute top-[-30px] right-[-30px] bg-green-500 text-white text-sm font-bold px-4 py-1 rounded-full animate-shake">الأكثر طلباً</span>
+                        <h3 class="text-2xl font-bold mb-2">الباقة المميزة</h3>
+                        <p class="text-sm text-slate-300 mb-4">للمنتجات التقليدية والطبية</p>
+                    </div>
+                    <p class="text-4xl font-extrabold mb-6 gradient-text">650 جنيه</p>
+                    <div class="flex-grow">
+                        <p class="font-bold text-lg mb-4 flex items-center"><i class="fas fa-star text-yellow-400 ml-3"></i> كل مميزات الباقة التقليدية بالإضافة إلى:</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>تصميم فريد ومخصص للمنتجات الطبية أو المميزة.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>كتابة محتوى أكثر عمقًا وإقناعًا.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>تحسين سرعة تحميل الصفحة.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>متابعة وإجراء حتى 2 تعديل مجاني.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>خصم 50% على ربط الدومين.</span></li>
+                            <li class="flex items-start"><i class="fas fa-headset text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>دعم استشاري لمدة 48 ساعة بعد التسليم.</span></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4 text-red-500 text-sm font-semibold">
+                        <i class="fas fa-exclamation-circle ml-2"></i>
+                        ملحوظة: يضاف 100 جنيه إذا كان المنتج خارج السوق المصري.
+                    </div>
+                    <button onclick="openWhatsApp('الباقة المميزة', 'EasyOrder')" class="mt-8 w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg shadow-green-500/50">اطلب الآن</button>
+                </div>
+
+                <!-- Card 3: Digital Products Package -->
+                <div class="bg-slate-800 rounded-2xl p-8 shadow-lg transform hover:scale-105 hover:shadow-green-500/20 transition-all duration-300 border border-slate-700 flex flex-col md:col-span-2 lg:col-span-1">
+                    <h3 class="text-2xl font-bold mb-4">باقة المنتجات الرقمية</h3>
+                    <p class="text-4xl font-extrabold mb-6 gradient-text">تبدأ من 1000 جنيه</p>
+                    <div class="flex-grow">
+                        <p class="font-bold text-lg mb-4 flex items-center"><i class="fas fa-book-open text-green-500 ml-3"></i> مصممة للكتب والكورسات:</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>تصميم صفحة هبوط متكاملة وجذابة.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>محتوى تسويقي قوي (معاينة، شهادات، أسئلة شائعة).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>تحسين تجربة المستخدم لأعلى تحويل.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>دعم التهيئة للسيو الأساسي (SEO Ready).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 ml-3 flex-shrink-0"></i> <span>دعم حتى 3 تعديلات مجانية.</span></li>
+                        </ul>
+                    </div>
+                     <div class="mt-4 text-red-500 text-sm font-semibold">
+                        <i class="fas fa-exclamation-circle ml-2"></i>
+                        ملحوظة: يضاف 100 جنيه إذا كان المنتج خارج السوق المصري.
+                    </div>
+                    <button onclick="openWhatsApp('باقة المنتجات الرقمية', 'المنتجات الرقمية')" class="mt-8 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">اطلب الآن</button>
+                </div>
+            </div>
+            <!-- Upselling Note -->
+            <div class="text-center mt-8 bg-slate-800/50 border border-dashed border-slate-600 rounded-lg p-4">
+                <p class="text-lg font-bold"><i class="fas fa-arrow-up text-green-400"></i> عند اضافة صفحة Upselling</p>
+                <p class="text-green-400 font-semibold">+100 جنيه على سعر الباقة المتفق عليها</p>
+            </div>
+        </section>
+
+        <!-- Spacer -->
+        <div class="my-16 border-b border-slate-700"></div>
+
+        <!-- Pricing Section: Lightfunnels -->
+        <section id="lightfunnels">
+             <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold border-b-2 pb-2 inline-block" style="border-color: #2a8cff;">
+                    <i class="fas fa-fighter-jet" style="color: #2a8cff;"></i> Landing Page (Lightfunnels)
+                </h2>
+                 <!-- Logo Placeholder -->
+                <div class="mt-4 h-16 w-48 bg-slate-800/50 mx-auto rounded-lg flex items-center justify-center border border-dashed border-slate-600">
+                    <img src="assets/3.svg" alt="Lightfunnels Logo" class="h-12 object-contain" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=text-slate-400>مكان اللوجو</span>'">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Card 1: Traditional Package -->
+                <div class="bg-slate-800 rounded-2xl p-8 shadow-lg transform hover:scale-105 hover:shadow-pink-500/20 transition-all duration-300 border border-slate-700 flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2">الباقة التقليدية</h3>
+                    <p class="text-sm text-slate-400 mb-4">للمنتجات التقليدية فقط</p>
+                    <p class="text-4xl font-extrabold mb-6" style="color: #2a8cff;">600 جنيه</p>
+                    <div class="flex-grow">
+                        <p class="font-bold text-lg mb-4 flex items-center"><i class="fas fa-box-open ml-3" style="color: #2a8cff;"></i> تشمل:</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>تصميم صفحة هبوط جذابة واحترافية.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>محتوى تسويقي مخصص لزيادة التحويل (CRO).</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>تصميم UX/UI متجاوب بالكامل.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>إضافة Facebook Pixel للتتبع.</span></li>
+                        </ul>
+                    </div>
+                     <div class="mt-4 text-red-500 text-sm font-semibold">
+                        <i class="fas fa-exclamation-circle ml-2"></i>
+                        ملحوظة: يضاف 100 جنيه إذا كان المنتج خارج السوق المصري.
+                    </div>
+                    <button onclick="openWhatsApp('الباقة التقليدية', 'Lightfunnels')" class="mt-8 w-full text-white font-bold py-3 px-6 rounded-lg transition-opacity duration-300 hover:opacity-90" style="background-color: #2a8cff;">اطلب الآن</button>
+                </div>
+
+                <!-- Card 2: Premium Package -->
+                <div class="bg-slate-800 rounded-2xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 border-2 flex flex-col animate-pulse-glow" style="--border-color-start: #2a8cff; --border-color-end: #ff4d94; --glow-color-start: rgba(251, 0, 94, 0.3); --glow-color-end: rgba(251, 0, 94, 0.5);">
+                    <div class="relative">
+                        <span class="absolute top-[-30px] right-[-30px] text-white text-sm font-bold px-4 py-1 rounded-full animate-shake" style="background-color: #2a8cff;">الأكثر طلباً</span>
+                        <h3 class="text-2xl font-bold mb-2">الباقة المميزة</h3>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-4">للمنتجات التقليدية والطبية</p>
+                    <p class="text-4xl font-extrabold mb-6" style="color: #2a8cff;">750 جنيه</p>
+                    <div class="flex-grow">
+                        <p class="font-bold text-lg mb-4 flex items-center"><i class="fas fa-star text-yellow-400 ml-3"></i> كل مميزات الباقة التقليدية بالإضافة إلى:</p>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>تصميم عالي الاحترافية للمنتجات الطبية والقيمة.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>تحسين سرعة الصفحة لتقليل معدل الارتداد.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>ربط Google Sheet لتسجيل الطلبات.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>دعم استشاري لمدة 48 ساعة.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle mt-1 ml-3 flex-shrink-0" style="color: #2a8cff;"></i> <span>ربط دومين مجاني ضمن الباقة.</span></li>
+                        </ul>
+                    </div>
+                     <div class="mt-4 text-red-500 text-sm font-semibold">
+                        <i class="fas fa-exclamation-circle ml-2"></i>
+                        ملحوظة: يضاف 100 جنيه إذا كان المنتج خارج السوق المصري.
+                    </div>
+                    <button onclick="openWhatsApp('الباقة المميزة', 'Lightfunnels')" class="mt-8 w-full text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg" style="background-image: linear-gradient(to right, #2a8cff, #d90052); box-shadow: 0 4px 14px 0 rgba(251, 0, 94, 0.39);">اطلب الآن</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacer -->
+        <div class="my-16 border-b border-slate-700"></div>
+        
+        <!-- Results Carousel Section -->
+        <section id="results-carousel" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">✨ نتائجنا تتحدث عنا ✨</h2>
+            <!-- Swiper container with navigation -->
+            <div class="max-w-6xl mx-auto relative px-10">
+                <div class="swiper-container overflow-hidden">
+                    <div class="swiper-wrapper items-center">
+                        <!-- Slides -->
+                        <div class="swiper-slide bg-slate-800/50 rounded-xl p-4">
+                            <img src="assets/1.png" class="rounded-lg w-full max-h-80 object-contain" alt="صورة نتائج ايزي اوردر" onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f1411/22C55E?text=نتائج+EasyOrder';">
+                        </div>
+                        <div class="swiper-slide bg-slate-800/50 rounded-xl p-4">
+                            <img src="assets/2.png" class="rounded-lg w-full max-h-80 object-contain" alt="صورة نتائج لايت فانل" onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f1411/a855f7?text=نتائج+Lightfunnels';">
+                        </div>
+                        <div class="swiper-slide bg-slate-800/50 rounded-xl p-4">
+                            <img src="assets/3.png" class="rounded-lg w-full max-h-80 object-contain" alt="صورة معدل تحويل" onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f1411/ffffff?text=معدل+تحويل+عالي';">
+                        </div>
+                        <div class="swiper-slide bg-slate-800/50 rounded-xl p-4">
+                            <img src="assets/4.png" class="rounded-lg w-full max-h-80 object-contain" alt="صورة آراء العملاء" onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f1411/facc15?text=آراء+العملاء';">
+                        </div>
+                        <div class="swiper-slide bg-slate-800/50 rounded-xl p-4">
+                            <img src="assets/5.jpeg" class="rounded-lg w-full max-h-80 object-contain" alt="صورة زيادة المبيعات" onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f1411/22C55E?text=زيادة+المبيعات';">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination mt-8 relative"></div>
+            </div>
+        </section>
+
+        <!-- Other Sections -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Store Design -->
+            <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-green-500/50 transition-colors duration-300">
+                <h3 class="text-2xl font-bold mb-4"><i class="fas fa-shopping-cart text-green-400 ml-2"></i> تصميم المتاجر (EasyOrder / Shopify)</h3>
+                <p class="text-slate-300 mb-4">تصميم أو إعادة بناء المتاجر يتم حسب الاتفاق وحسب خطة التحسين المقترحة لكل براند.</p>
+                <p class="text-slate-300 font-semibold">💵 السعر يختلف حسب حجم البراند، نوع الثيم، وعدد الأقسام والمنتجات.</p>
+            </div>
+
+            <!-- General Rules -->
+            <div class="relative mt-4 md:mt-0">
+                <span class="absolute top-[-20px] right-[-20px] bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-full animate-shake flex items-center z-10">
+                    <i class="fas fa-exclamation-triangle ml-2"></i>
+                    هام جدًا
+                </span>
+                <div class="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 animate-pulse-glow h-full" style="--border-color-start: #22C55E; --border-color-end: #34D399; --glow-color-start: rgba(34, 197, 94, 0.3); --glow-color-end: rgba(34, 197, 94, 0.6);">
+                    <h3 class="text-2xl font-bold mb-4"><i class="fas fa-gavel text-green-400 ml-2"></i> قواعد العمل العامة</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-3"></i> <span>مدة التسليم: خلال 72 ساعة من تأكيد الطلب.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-3"></i> <span>مواعيد التواصل: 10ص - 10م، عدا الجمعة والسبت.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-3"></i> <span>لكل باقة حد أقصى للتعديلات (2 مجاني).</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-3"></i> <span>يتم دفع عربون 50% لتأكيد الحجز.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-500 mt-1 ml-3"></i> <span>الأسعار خاصة بـ EasyOrder و Lightfunnels.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spacer -->
+        <div class="my-16 border-b border-slate-700"></div>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">🎨 معرض الأعمال</h2>
+            <a href="https://h0kaz.github.io/hegazi-portfolio/" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-green-500 to-teal-400 hover:from-green-600 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-teal-400/50 transform hover:scale-105">
+                <i class="fas fa-briefcase ml-2"></i>
+                تصفح معرض الأعمال
+            </a>
+        </section>
+        
+        <!-- Additional Features -->
+        <div class="mt-12 bg-gradient-to-r from-green-500/10 to-slate-800/10 rounded-2xl p-8 border border-slate-700">
+            <h3 class="text-2xl font-bold mb-4 text-center"><i class="fas fa-magic text-yellow-400 ml-2"></i> مميزات إضافية لكل الباقات</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div class="p-4 transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-mobile-alt text-4xl mb-3 text-green-400"></i>
+                    <h4 class="font-bold">تصميم متجاوب 100%</h4>
+                </div>
+                <div class="p-4 transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-pencil-ruler text-4xl mb-3 text-green-400"></i>
+                    <h4 class="font-bold">محتوى احترافي (CRO)</h4>
+                </div>
+                <div class="p-4 transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-headset text-4xl mb-3 text-green-400"></i>
+                    <h4 class="font-bold">دعم تقني مجاني</h4>
+                </div>
+                <div class="p-4 transform hover:scale-110 transition-transform duration-300">
+                    <i class="fas fa-lightbulb text-4xl mb-3 text-green-400"></i>
+                    <h4 class="font-bold">تحسين تجربة المستخدم</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201206097481" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center text-white shadow-lg transform hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <!-- Swiper.js JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper & WhatsApp Function -->
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            spaceBetween: 20,
+            slidesPerView: 1,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+
+        // WhatsApp Function
+        function openWhatsApp(packageName, platformName) {
+            const baseText = "عاوز أعرف تفاصيل أكتر او أكد حجز";
+            const message = `${baseText} ${packageName} الخاصة بـ ${platformName}`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/201206097481?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+
+</body>
+</html>
