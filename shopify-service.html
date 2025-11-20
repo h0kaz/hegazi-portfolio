@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم متاجر شوبيفاي الاحترافية | محمد حجازي</title>
+    <meta name="description" content="خدمة تصميم متاجر Shopify احترافية لزيادة المبيعات. تصميم سريع، متجاوب، ومهيأ للتحويل.">
+    
+    <!-- Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons: FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Animation Library (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    script async src="https://www.googletagmanager.com/gtag/js?id=G-NG5XLR7VT2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NG5XLR7VT2');
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#121212',
+                        darkgray: '#1e1e1e',
+                        cardgray: '#252525',
+                        accent: '#16a34a', // Green
+                        accentHover: '#15803d',
+                        premium: '#f59e0b', // Gold
+                        premiumHover: '#d97706',
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'gradient-x': 'gradient-x 3s ease infinite', // New Animation
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            'from': { boxShadow: '0 0 10px -10px #16a34a' },
+                            'to': { boxShadow: '0 0 25px 5px rgba(22, 163, 74, 0.2)' },
+                        },
+                        'gradient-x': { // New Keyframes
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #121212;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Announcement Bar Slide Animation */
+        #announcement-bar {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(-100%);
+        }
+        #announcement-bar.visible {
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #16a34a;
+        }
+        
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Mohamed Hegazi Shopify Design",
+      "image": "/mnt/data/66aa5f11-0776-41a4-8457-2fef984cc45e.png",
+      "description": "تصميم متاجر Shopify احترافية لزيادة المبيعات",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EG"
+      }
+    }
+    </script>
+</head>
+<body class="antialiased relative">
+
+    <!-- 2) ANNOUNCEMENT BAR (Updated: Gradient Animation + No Close Button) -->
+    <div id="announcement-bar" class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-darkgray via-[#0f391b] to-darkgray bg-[length:200%_auto] animate-gradient-x border-b border-accent/30 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-center items-center">
+            <div class="flex items-center gap-2 text-sm md:text-base font-medium text-white text-center">
+                <span class="text-premium animate-pulse">🔥</span>
+                <span>عرض حصري — خصم محدود لفترة قصيرة على الباقة المميزة</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3) HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-12">
+            
+            <!-- Text Content -->
+            <div class="w-full md:w-1/2 text-center md:text-right" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-accent uppercase bg-accent/10 rounded-full border border-accent/20">
+                    Shopify Theme Customization Specialist | CRO Focused
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
+                    متجر Shopify احترافي <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-l from-accent to-emerald-300">مصمم لزيادة مبيعاتك</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                    أبني لك متجر سريع، متجاوب، ومهيأ للتحويل — جاهز للإطلاق خلال أيام.
+                </p>
+                
+                <a href="https://wa.me/201206097481?text=مرحبا%20محمد،%20مهتم%20بخدمة%20تصميم%20متجر%20Shopify.%20أريد%20معرفة%20التفاصيل%20من%20فضلك." 
+                   target="_blank"
+                   class="inline-flex items-center gap-3 bg-accent hover:bg-accentHover text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg shadow-accent/25 group">
+                    <span>ابدأ مشروعك الآن</span>
+                    <i class="fa-brands fa-whatsapp text-xl group-hover:rotate-12 transition-transform"></i>
+                </a>
+                
+                <div class="mt-8 flex items-center justify-center md:justify-start gap-4 text-sm text-gray-500">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-accent"></i> تسليم سريع</span>
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-accent"></i> دعم فني</span>
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-accent"></i> جودة عالية</span>
+                </div>
+            </div>
+
+            <!-- Visual / Floating Logo with Hero Image inside -->
+            <div class="w-full md:w-1/2 flex justify-center relative" data-aos="zoom-in" data-aos-delay="200">
+                <div class="relative w-64 h-64 md:w-96 md:h-96 animate-float">
+                    <!-- Decorative Rings -->
+                    <div class="absolute inset-0 border-2 border-dashed border-gray-700 rounded-full animate-[spin_20s_linear_infinite]"></div>
+                    <div class="absolute inset-8 border border-gray-800 rounded-full"></div>
+                    
+                    <!-- Central Image Container -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-cardgray to-darkgray rounded-full shadow-2xl border border-gray-800 overflow-hidden">
+                        <!-- Hero Image inside Circle -->
+                        <img src="assets/img/shopify/hero.png" 
+                             alt="Shopify Hero" 
+                             class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <!-- Floating Icons Orbiting -->
+                    <div class="absolute top-0 right-10 bg-darkgray p-3 rounded-lg border border-gray-700 shadow-lg animate-bounce" style="animation-delay: 1s;">
+                        <i class="fa-solid fa-cart-shopping text-blue-400"></i>
+                    </div>
+                    <div class="absolute bottom-10 left-0 bg-darkgray p-3 rounded-lg border border-gray-700 shadow-lg animate-bounce" style="animation-delay: 2s;">
+                        <i class="fa-solid fa-chart-line text-accent"></i>
+                    </div>
+                    <div class="absolute bottom-0 right-20 bg-darkgray p-3 rounded-lg border border-gray-700 shadow-lg animate-bounce" style="animation-delay: 0.5s;">
+                        <i class="fa-solid fa-credit-card text-premium"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4) WHY CHOOSE ME -->
+    <section class="py-20 bg-darkgray/50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-cardgray p-8 rounded-2xl border border-gray-800 hover:border-accent/50 transition-colors group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors text-2xl">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">إطلاق سريع</h3>
+                    <p class="text-gray-400">متجرك جاهز خلال أيام، دون تأخير في الجدول الزمني.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-cardgray p-8 rounded-2xl border border-gray-800 hover:border-accent/50 transition-colors group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors text-2xl">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">تصميم مهيأ للتحويل</h3>
+                    <p class="text-gray-400">مبني على مبادئ CRO لتحويل الزوار إلى عملاء دائمين.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-cardgray p-8 rounded-2xl border border-gray-800 hover:border-accent/50 transition-colors group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors text-2xl">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">دعم كامل بعد التسليم</h3>
+                    <p class="text-gray-400">إعداد، تدريب، وتعديلات بسيطة لضمان انطلاقة قوية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5) PACKAGES SECTION -->
+    <section class="py-24 bg-charcoal relative" id="packages">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">باقات التصميم</h2>
+                <p class="text-gray-400">اختر الباقة المناسبة لحجم مشروعك وأهدافك</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                
+                <!-- PACKAGE 1: TRADITIONAL (The Starter Store Package) -->
+                <div class="bg-cardgray rounded-3xl p-8 md:p-10 border border-gray-800 hover:shadow-xl hover:shadow-gray-900/50 transition-all duration-300 flex flex-col" data-aos="fade-up" data-aos-delay="0">
+                    <h3 class="text-2xl font-bold text-white mb-2">الباقة التقليدية</h3>
+                    <span class="text-sm font-medium text-gray-400 uppercase tracking-wider mb-4 block">The Starter Store Package</span>
+                    <p class="text-gray-300 text-sm mb-6 min-h-[40px]">مناسبة للمبتدئين اللي عايزين متجر شغال بسرعة وبأقل تكلفة.</p>
+                    
+                    <div class="h-px w-full bg-gray-700 mb-8"></div>
+                    
+                    <div class="mb-8 flex-grow">
+                        <h4 class="text-accent font-bold mb-4 text-sm uppercase"><i class="fa-solid fa-star text-xs ml-2"></i> المحتوى الأساسي</h4>
+                        <ul class="space-y-4 text-gray-300 text-sm md:text-base">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-accent mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">تصميم بانر رئيسي احترافي</strong>
+                                    <span class="text-gray-500 text-xs">ستايل نظيف يناسب المنتجات + متوافق مع الموبايل.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-accent mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">تصميم 3 أقسام (Collections)</strong>
+                                    <span class="text-gray-500 text-xs">متنسّقة وجاهزة للعرض.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-accent mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">إضافة حتى 5 منتجات</strong>
+                                    <span class="text-gray-500 text-xs">الصور – السعر – الوصف الأساسي – الفئات.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-accent mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">ربط الدومين بالمتجر</strong>
+                                    <span class="text-gray-500 text-xs">إعداد DNS + توجيه الدومين لشوبيفاي.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-accent mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">تحسينات بسيطة للواجهة</strong>
+                                    <span class="text-gray-500 text-xs">تعديل الألوان، الخطوط، وتنظيف الهيدر والفوتر.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-accent mt-1.5 flex-shrink-0"></i>
+                                <span>مراجعة كاملة للمتجر قبل التسليم.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-darkgray/50 p-4 rounded-xl mb-8 border border-gray-700/50">
+                        <h4 class="text-white font-bold text-xs mb-2 flex items-center gap-2"><i class="fa-solid fa-bullseye text-accent"></i> مناسبة لمن؟</h4>
+                        <ul class="text-xs text-gray-400 space-y-1 list-disc list-inside marker:text-accent">
+                            <li>اللي لسه بادئ ومحتاج متجر شغال بسرعة.</li>
+                            <li>اللي عنده منتجات قليلة ومش محتاج توسّع كبير حالياً.</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/201206097481?text=مرحبا%20محمد%2C%20مهتم%20بباقة%20البداية%20(Starter%20Package).%20أرسل%20لي%20التفاصيل." target="_blank" 
+                       class="block w-full py-4 text-center border border-gray-600 text-white rounded-xl font-bold hover:bg-white hover:text-black transition-colors">
+                        أطلب باقة البداية
+                    </a>
+                </div>
+
+                <!-- PACKAGE 2: PREMIUM (The Premium Growth Package) -->
+                <div class="bg-cardgray rounded-3xl p-8 md:p-10 border-2 border-premium relative transform lg:-translate-y-4 shadow-[0_0_40px_-10px_rgba(245,158,11,0.15)] flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Badge -->
+                    <div class="absolute -top-4 right-1/2 translate-x-1/2 bg-premium text-black font-bold py-1 px-6 rounded-full text-sm shadow-lg whitespace-nowrap">
+                        الأكثر طلباً للنمو 🚀
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white mb-2">الباقة المميزة</h3>
+                    <span class="text-sm font-bold text-premium uppercase tracking-wider mb-4 block">The Premium Growth Package</span>
+                    <p class="text-gray-300 text-sm mb-6 min-h-[40px]">للي عايز متجر محترف جاهز للنمو + تحسينات CRO لرفع المبيعات.</p>
+
+                    <div class="h-1 w-full bg-gradient-to-l from-cardgray via-premium to-cardgray mb-8 opacity-50"></div>
+
+                    <div class="mb-8 flex-grow">
+                        <h4 class="text-premium font-bold mb-4 text-sm uppercase"><i class="fa-solid fa-crown text-xs ml-2"></i> كل مزايا الباقة التقليدية بالإضافة إلى:</h4>
+                        <ul class="space-y-4 text-gray-200 text-sm md:text-base">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-premium mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">بانر احترافي High-Conversion</strong>
+                                    <span class="text-gray-400 text-xs">ألوان + CTA + هوك حسب المجال.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-premium mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">تصميم حتى 5 أقسام كاملة</strong>
+                                    <span class="text-gray-400 text-xs">تقسيمة احترافية + صور مناسبة + ترتيب واضح.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-premium mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">إضافة حتى 10 منتجات بالكامل</strong>
+                                    <span class="text-gray-400 text-xs">صور، وصف، Variants، Tags + تحسين الترتيب.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-premium mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">إضافة 3 تطبيقات (Apps) أساسية</strong>
+                                    <span class="text-gray-400 text-xs">مراجعات (Reviews)، شحن، Upsells/Bundles.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-premium mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">إعدادات تقنية متقدمة (Pixel & DNS)</strong>
+                                    <span class="text-gray-400 text-xs">ربط الدومين + فيسبوك بيكسل + إعداد الشحن المجاني.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-premium mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">تحسين تجربة المستخدم (UX & Speed)</strong>
+                                    <span class="text-gray-400 text-xs">ترتيب الأقسام، ضبط الهيدر، تحسين سرعة الصفحة.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-globe text-premium mt-1.5 flex-shrink-0"></i>
+                                <div>
+                                    <strong class="text-white block">خدمة ترجمة المتجر (اختياري)</strong>
+                                    <span class="text-gray-400 text-xs">بتكلفة إضافية تُحسب حسب المحتوى.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Value & Target -->
+                    <div class="bg-premium/10 p-5 rounded-xl mb-8 border border-premium/20">
+                        <div class="mb-4">
+                            <h4 class="text-premium font-bold text-xs mb-2 flex items-center gap-2"><i class="fa-solid fa-gem"></i> القيمة المضافة:</h4>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                واجهة محترفة من أول يوم، جاهزة للتسويق مباشرة، مع أدوات لزيادة معدل التحويل (Conversion Rate).
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-premium font-bold text-xs mb-2 flex items-center gap-2"><i class="fa-solid fa-bullseye"></i> مناسبة لمن؟</h4>
+                            <ul class="text-xs text-gray-300 space-y-1 list-disc list-inside marker:text-premium">
+                                <li>اللي ناوي يعمل حملات إعلانية مدفوعة.</li>
+                                <li>اللي محتاج متجر قوي وجاهز للنمو (Scalable).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/201206097481?text=مرحبا%20محمد%2C%20مهتم%20بباقة%20النمو%20(Premium%20Growth%20Package).%20أرسل%20لي%20التفاصيل." target="_blank" 
+                       class="block w-full py-4 text-center bg-premium hover:bg-premiumHover text-black rounded-xl font-bold transition-colors shadow-lg shadow-premium/20 hover:scale-[1.02] transform duration-200">
+                        أحصل على باقة النمو المميزة
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 6) PORTFOLIO SECTION (Updated: Image fit logic) -->
+    <section class="py-24 bg-darkgray border-y border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">معرض الأعمال</h2>
+                <p class="text-gray-400">نماذج حية لمتاجر قمت بتصميمها</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: UniShop -->
+                <article class="bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 group transition-all hover:-translate-y-2" data-aos="fade-up">
+                    <!-- Removed fixed aspect ratio classes, added w-full h-auto to img -->
+                    <div class="w-full overflow-hidden bg-gray-900">
+                        <img src="assets/img/shopify/UniShop Shopify Store.png" alt="UniShop Thumbnail" loading="lazy" class="w-full h-auto block opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">UniShop</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            متجر متعدد الأصناف بتجربة تصفح سلسة، صفحات منتجات منظمة، تحسين سرعة التحميل، وإضافة استراتيجيات Upsell لزيادة متوسط سعر السلة.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="https://unishopeg.com/" target="_blank" class="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-accent hover:text-white text-white py-3 px-4 rounded-lg text-center text-sm font-medium transition-all border border-gray-700 hover:border-accent group-hover:bg-accent group-hover:border-accent">
+                                معاينة المشروع <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Twinz Shop -->
+                <article class="bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 group transition-all hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-full overflow-hidden bg-gray-900">
+                        <img src="assets/img/shopify/Twinz Shop Shopify Store.png" alt="Twinz Shop Thumbnail" loading="lazy" class="w-full h-auto block opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Twinz Shop</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            متجر أزياء بواجهة نظيفة، نظام فلاتر واضح، وصف منتجات مقنع، وسرعة تحميل ممتازة لتحسين تجربة المشتري.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="https://twinz-shop.com/" target="_blank" class="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-accent hover:text-white text-white py-3 px-4 rounded-lg text-center text-sm font-medium transition-all border border-gray-700 hover:border-accent group-hover:bg-accent group-hover:border-accent">
+                                معاينة المشروع <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Daneya Store -->
+                <article class="bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 group transition-all hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-full overflow-hidden bg-gray-900">
+                        <img src="assets/img/shopify/Daneya Shopify Store.png" alt="Daneya Store Thumbnail" loading="lazy" class="w-full h-auto block opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Daneya Store</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            متجر أزياء نسائية بتصميم أنيق، صفحات مجموعات احترافية، تجربة عربة مبسطة لتقليل الهجر وزيادة التحويل.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="https://daneya.shop/" target="_blank" class="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-accent hover:text-white text-white py-3 px-4 rounded-lg text-center text-sm font-medium transition-all border border-gray-700 hover:border-accent group-hover:bg-accent group-hover:border-accent">
+                                معاينة المشروع <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Premium Protein -->
+                <article class="bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 group transition-all hover:-translate-y-2" data-aos="fade-up">
+                    <div class="w-full overflow-hidden bg-gray-900">
+                        <img src="assets/img/shopify/Premium Protein Shopify Store.png" alt="Premium Protein Thumbnail" loading="lazy" class="w-full h-auto block opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Premium Protein</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            متجر مكملات بتصميم فاخر، صفحات منتجات مقنعة، عناصر Trust قوية، وتحسينات CRO لزيادة المبيعات.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="https://dkmira-iw.myshopify.com/" target="_blank" class="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-accent hover:text-white text-white py-3 px-4 rounded-lg text-center text-sm font-medium transition-all border border-gray-700 hover:border-accent group-hover:bg-accent group-hover:border-accent">
+                                معاينة المشروع <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: Khadija Store -->
+                <article class="bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gray-600 group transition-all hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-full overflow-hidden bg-gray-900">
+                        <img src="assets/img/shopify/Khadija Shopify Store.png" alt="Khadija Store Thumbnail" loading="lazy" class="w-full h-auto block opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Khadija Store</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            متجر ملابس بحشمة بتجربة شراء بسيطة، صور منتجات عالية الجودة، وسهولة تنقل محسّنة.
+                        </p>
+                        <div class="mt-auto">
+                            <a href="https://khadigastore.com/" target="_blank" class="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-accent hover:text-white text-white py-3 px-4 rounded-lg text-center text-sm font-medium transition-all border border-gray-700 hover:border-accent group-hover:bg-accent group-hover:border-accent">
+                                معاينة المشروع <i class="fa-solid fa-arrow-up-left-from-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7) TESTIMONIALS -->
+    <section class="py-24 bg-charcoal">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">آراء العملاء</h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-cardgray p-8 rounded-2xl border border-gray-800 relative" data-aos="fade-up">
+                    <i class="fa-solid fa-quote-right text-4xl text-gray-700 absolute top-6 left-6"></i>
+                    <div class="flex gap-1 text-premium mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "تعامل محترم جدًا والشغل طلع أنضف مما توقعت. سريع في التنفيذ ومهتم بالتفاصيل."
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-cardgray p-8 rounded-2xl border border-gray-800 relative" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-quote-right text-4xl text-gray-700 absolute top-6 left-6"></i>
+                    <div class="flex gap-1 text-premium mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "الدزاين احترافي والتجربة سلسة، المتجر بقى أسرع بكتير وبصراحة فرق معايا في المبيعات."
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-cardgray p-8 rounded-2xl border border-gray-800 relative" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-quote-right text-4xl text-gray-700 absolute top-6 left-6"></i>
+                    <div class="flex gap-1 text-premium mb-4 text-sm">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        "بيتواصل باستمرار وبيطمنك على كل خطوة. تسليم في الميعاد وشغل مظبوط."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8) PROCESS -->
+    <section class="py-20 bg-darkgray/30 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+             <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">كيف نعمل معاً؟</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <!-- Step 1 -->
+                <div class="relative group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 mx-auto bg-gray-800 border border-gray-700 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:border-accent group-hover:text-accent transition-colors z-10 relative">1</div>
+                    <h3 class="text-lg font-bold text-white">التحليل والاكتشاف</h3>
+                    
+                    <!-- Connector Line (Desktop) -->
+                    <div class="hidden md:block absolute top-8 right-[60%] w-full h-[2px] bg-gray-800 -z-0"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-gray-800 border border-gray-700 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:border-accent group-hover:text-accent transition-colors z-10 relative">2</div>
+                    <h3 class="text-lg font-bold text-white">التصميم وتجهيز الواجهات</h3>
+                    
+                    <div class="hidden md:block absolute top-8 right-[60%] w-full h-[2px] bg-gray-800 -z-0"></div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-gray-800 border border-gray-700 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:border-accent group-hover:text-accent transition-colors z-10 relative">3</div>
+                    <h3 class="text-lg font-bold text-white">التطوير والإعدادات</h3>
+                    
+                    <div class="hidden md:block absolute top-8 right-[60%] w-full h-[2px] bg-gray-800 -z-0"></div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto bg-gray-800 border border-gray-700 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 group-hover:border-accent group-hover:text-accent transition-colors z-10 relative">4</div>
+                    <h3 class="text-lg font-bold text-white">الإطلاق + دعم 14 يوم</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9) FOOTER -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-right">
+                <h3 class="text-xl font-bold text-white mb-2">محمد حجازي</h3>
+                <p class="text-gray-500 text-sm">مصمم ومطور متاجر Shopify متخصص في التجارة الإلكترونية.</p>
+            </div>
+            
+            <div class="flex gap-4">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/mohamed.hegazi.764878" target="_blank" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-[#1877F2] hover:text-white transition-colors" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/mohammedhegazii/" target="_blank" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-[#0077b5] hover:text-white transition-colors" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <!-- Email -->
+                <a href="mailto:mohammedhegazi06@gmail.com" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-white transition-colors" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-8 pt-8 border-t border-gray-900 text-gray-600 text-xs">
+            &copy; 2024 Mohamed Hegazi. جميع الحقوق محفوظة.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201206097481?text=مرحبا%20محمد،%20مهتم%20بخدمة%20تصميم%20متجر%20Shopify.%20أريد%20معرفة%20التفاصيل%20من%20فضلك." 
+       target="_blank"
+       class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl transition-all hover:scale-110 animate-bounce-slow"
+       aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Script for Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init AOS
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+
+        // Announcement Bar Logic
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('announcement-bar').classList.add('visible');
+            }, 500);
+        });
+
+        function closeAnnouncement() {
+            document.getElementById('announcement-bar').classList.remove('visible');
+        }
+    </script>
+</body>
+</html>
